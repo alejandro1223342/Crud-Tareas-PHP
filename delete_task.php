@@ -1,14 +1,23 @@
 <?php 
     include ("db.php");
 
-    if (isser($_GET['id'])){
+    
+    if (isset($_GET['id'])){
         $id = $_GET['id'];
-        $query = "DELETE FROM tasks WHERE id = $id";
-        $result=mysqli_query    ($conn, $query);
+        $query = "DELETE FROM task WHERE id = $id";
+        $result=mysqli_query($conn, $query);
 
         if(!$result){
             die("Query Failed");
+
         }
+
+        $_SESSION['message'] = 'Tarea removida existosamente';
+        $_SESSION['message_type']='danger';
+        header("Location: index.php");
+
     }
  
 ?>
+
+

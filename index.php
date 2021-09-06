@@ -20,7 +20,7 @@
         <div class="card card-body">
             <form action="save_task.php" method="POST">
                 <div class="form-group">
-                    <input type="text" name="title class" class="form-control"
+                    <input type="text" name="title" class="form-control"
                     placeholder="Ingrese Titulo" autofocus>
 
                     <div class="form-group">
@@ -65,7 +65,7 @@
                                 <i class="fas fa-marker"></i>
 
                                 </a> 
-                                <a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+                                <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
                                     <i class="far fa-trash-alt"></i>
                                 </a>     
                             </td>
@@ -79,6 +79,7 @@
         
     </div>
 </div>
+
 
 <?php include("includes/footer.php")?>    
 
